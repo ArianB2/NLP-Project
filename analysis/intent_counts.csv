@@ -1,0 +1,5 @@
+Label,Meaning,Messages,Percent
+O,Other,19982,74.22
+E,Explicit toxicity,3528,13.11
+I,Implicit toxicity,1692,6.29
+A,Action,1719,6.39

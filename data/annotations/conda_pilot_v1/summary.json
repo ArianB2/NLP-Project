@@ -1,0 +1,38 @@
+{
+  "total": 240,
+  "source_strata": {
+    "E": 80,
+    "I": 80,
+    "O": 60,
+    "A": 20
+  },
+  "categories": {
+    "explicit_hostility": 61,
+    "implicit_hostility": 34,
+    "non_hostile": 79,
+    "uncertain": 66
+  },
+  "hostility": {
+    "hostile": 95,
+    "non_hostile": 79,
+    "uncertain": 66
+  },
+  "profanity": {
+    "present": 41,
+    "absent": 188,
+    "unknown": 11
+  },
+  "with_earlier_context": 145,
+  "human_reviewed": 0,
+  "currently_training_eligible_under_contract": 0,
+  "non_uncertain_candidates_for_review": 174,
+  "unique_matches": 219,
+  "checks": [
+    "240 unique source IDs",
+    "source file hash and original row equality",
+    "contract structural keyword-subset validation",
+    "annotation semantic consistency",
+    "evidence bounds",
+    "strictly earlier same-conversation context"
+  ]
+}

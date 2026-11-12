@@ -1,0 +1,31 @@
+{
+  "snapshot_date": "2026-11-11",
+  "source_path": "Bart-mnli/bart.py",
+  "source_sha256": "2003434d29d4da0d27c97033c2cc85c28e1981df1f43f4b6f8af6aaa0e74964d",
+  "task": "zero-shot-classification",
+  "model": "facebook/bart-large-mnli",
+  "candidate_labels": [
+    "The speaker is criticizing themself",
+    "The speaker is criticizing the video game",
+    "The speaker is criticizing another player",
+    "The speaker is criticizing the team",
+    "The speaker is not criticizing anyone"
+  ],
+  "hypothesis_template": "{}.",
+  "multi_label": false,
+  "example_messages": [
+    "I can't believe how bad I played today.",
+    "This game is terrible.",
+    "That player is so annoying.",
+    "Our team is a mess.",
+    "I'm not mad at anyone.",
+    "I'm such an idiot",
+    "stupid tree",
+    "my shit is lagging",
+    "Great game guys",
+    "Player 2 is absolutely dog shit",
+    "Can't believe I missed that shot"
+  ],
+  "model_revision": null,
+  "note": "Exact source and hypothesis configuration frozen. Original code does not pin a model/tokenizer revision. No weights were downloaded, trained or modified."
+}

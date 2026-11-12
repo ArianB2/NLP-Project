@@ -1,0 +1,241 @@
+n	category	target	profanity	context_required	behaviors	rationale
+1	E	individual	present	false	insult	Direct personal insult followed by blame for prolonging the game.
+2	E	individual	absent	false	insult	Says the player does not use their brain; direct competence insult.
+3	E	individual	present	false	insult	Direct abusive address to another player.
+4	E	individual	absent	false	insult	Dismissively orders another person to stop speaking.
+5	E	individual	absent	false	insult	Repeated noob labels target the player using the named hero.
+6	E	individual	present	false	insult	Profane noun directly addresses another player.
+7	I	individual	absent	false	humiliation	Account-purchase question insinuates the player did not earn their skill rating.
+8	E	group	absent	false	insult	Calls multiple people idiots.
+9	N	none	absent	false	-	Requests ending the match and reporting a player without a personal insult.
+10	E	group	present	false	insult,identity_attack	Moves from criticism of graphics to derogatory abuse of the game's players.
+11	N	none	absent	false	-	Reports alleged deliberate disruption; reporting misconduct is not itself an attack.
+12	E	group	absent	false	insult,identity_attack	Direct derogatory description of a nationality group.
+13	E	individual	present	false	insult	Sexualized family-directed abuse; not a literal stated threat by the speaker.
+14	E	individual	absent	false	insult	Noob is a direct player insult; killed refers to an in-game event.
+15	E	individual	present	false	insult	STFU is a profane dismissive command to another person.
+16	E	individual	absent	false	insult,identity_attack	Ableist slur directly modifies the hero player's name.
+17	E	individual	absent	false	insult	Calls the named hero player an idiot.
+18	E	individual	absent	false	insult	Direct noob insult toward the sniper player.
+19	E	individual	absent	false	insult	Direct idiot insult accompanies the easy-lane taunt.
+20	E	team	absent	false	insult	Explicitly insults the team and its carry.
+21	E	individual	present	false	insult,identity_attack	Direct racial slurs and profane abusive address.
+22	E	group	present	false	insult,identity_attack	Reporting request includes direct profane and ableist attacks on players.
+23	I	group	absent	true	identity_attack,humiliation	Frames gameplay negatively through nationality after competence complaints; context supports a group-directed sneer.
+24	E	individual	present	false	insult	Direct insults establish hostility; dieee could refer to gameplay and is not independently labeled as real-world harm encouragement.
+25	N	none	present	false	-	In this game context hole plausibly means the Black Hole ability; profane urgency alone does not attack the player.
+26	E	individual	present	false	insult	Direct profane dismissal of the recipient.
+27	E	individual	present	false	insult	Misspelled sexualized command is abusive address.
+28	U	unknown	present	true	?	Could be a profane factual statement about losing or a taunt; no earlier context is available.
+29	E	group	absent	false	insult	Calls reported people idiots; the final token is unclear and not assumed profane.
+30	E	individual	absent	false	insult	Directly calls the recipient a noob.
+31	E	group	present	false	insult,identity_attack	Profane silencing combined with a derogatory nationality generalization.
+32	E	individual	absent	false	insult	Direct noob insult toward a hero player.
+33	N	none	present	true	-	Earlier betting discussion identifies coins as the object of frustration, not a person.
+34	E	individual	present	false	insult	Profane noun directly attacks the recipient after a gameplay claim.
+35	E	individual	present	false	insult	Repeated profane insults and noob labels target another player's build.
+36	U	unknown	absent	true	?	Racial slur is present, but the isolated usage and partial context do not establish address, quotation, or endorsement reliably; identity review required.
+37	N	none	present	false	-	Current message is a profane draft-order instruction, not itself a personal attack despite earlier hostility.
+38	U	unknown	absent	true	?	Ableist wording describes this, but partial context cannot resolve whether it targets lag or a person.
+39	E	individual	absent	false	insult,encouragement_of_harm	Wishes killing on a player and calls them a noob; not automatically a credible threat.
+40	U	unknown	absent	true	?	Dogeee may be a meme, a name, or an insult; earlier doge reference does not settle the target.
+41	N	none	present	true	-	Earlier same-speaker question asks about Oracle's abilities, so weird shit refers to game mechanics.
+42	N	none	present	false	-	Profane frustration targets the random hero selection, not another person.
+43	E	individual	present	false	insult	Elongated STFU directly silences a person abusively.
+44	E	individual	present	false	insult	Crying little shit is a direct personal insult, separate from the AFK announcement.
+45	E	group	absent	false	identity_attack,insult	Peenoise is used as a derogatory nationality label with a negative group claim.
+46	U	unknown	present	true	?	Fragmentary wording may be derogatory, but neither the referent nor racial meaning is established by the available exchange.
+47	U	unknown	present	true	?	See that shit may react to a play or ridicule a player; limited history does not resolve it.
+48	U	unknown	absent	true	?	Could warn about disruptive conduct or join a personal pile-on; previous insults by other speakers do not prove this speaker's hostility.
+49	E	individual	absent	false	insult,identity_attack	Ableist slur modifies a hero player's selection.
+50	I	team	present	true	humiliation	Dismissive reference to these people, after the same speaker complains about a teammate's connection, implies contempt for teammates.
+51	E	group	present	false	insult	Addresses players with a profane insult while asking them to finish.
+52	I	individual	absent	true	humiliation	Teach me follows a direct insult and the speaker's retort, supporting mocking rather than a sincere request.
+53	E	individual	present	false	insult	Direct shitstain and skill-rating put-down target the invoker player; instakill is gameplay language.
+54	E	team	present	false	insult	Direct profane insult toward the team.
+55	U	unknown	unknown	true	?	Cumback appears as a pun on comeback; bf and the target are unclear, so profanity and hostility are not assumed.
+56	E	group	absent	true	identity_attack,insult	Tells a nationality group to stop playing; earlier same-speaker admission reinforces the identity-directed attack.
+57	E	individual	absent	false	insult	Calls someone a noob; the smile does not establish friendly banter.
+58	E	individual	absent	false	insult	Dismisses the recipient's speech as trash.
+59	U	unknown	absent	true	?	Offering an item for reports could be retaliation or a misconduct report; partial history does not explain the basis.
+60	E	individual	absent	false	insult	Repeated idiot label directly targets a named hero player.
+61	U	unknown	absent	true	?	Nationality reference alone does not establish a group attack; source E is not sufficient evidence.
+62	E	individual	present	false	insult	Direct profane rejection of another person.
+63	N	none	present	false	-	Expresses indifference with profanity without attacking a person in the available text.
+64	E	individual	present	false	insult	Unsolicited sexualized address directed at the recipient.
+65	E	individual	absent	false	insult	Reporting request directly calls the player a noob.
+66	E	individual	absent	false	insult	Direct noob player put-down.
+67	U	unknown	present	true	?	Profane catchphrase with a smile may be a meme or an insult; no conversation is available to decide.
+68	E	group	present	false	insult	Accuses others of betrayal and ends with a profane insult.
+69	I	individual	absent	true	humiliation	You lost game after teammate blame reads as assigning the loss to a player rather than reporting the match result.
+70	E	individual	present	false	insult	Sarcastic praise is followed by an overt profane attack on the recipient's speech.
+71	U	unknown	unknown	true	?	Compressed gaycumback string may be identity-directed abuse or a distorted comeback pun; mixed-language context is insufficient.
+72	E	individual	present	false	insult	Direct worst-player judgment and profane dehumanizing insult.
+73	E	individual	absent	false	insult	Calls the hero player a noob and a dog while laughing at them.
+74	E	individual	absent	false	threat	Explicit statement of sexual violence toward the recipient's mother; record as threatening language, not verified capability. Violent vocabulary is not automatically profanity.
+75	E	individual	present	false	insult	Supportive game statement is combined with direct profane address.
+76	E	individual	absent	false	insult	Gameplay explanation ends with an idiot insult.
+77	E	individual	present	false	insult	Direct repeated profanity toward PL; leaving them to die is in-game conduct, not a verified real-world threat.
+78	E	individual	present	false	insult	Direct profane insult; smile alone does not establish consensual banter.
+79	U	unknown	absent	true	?	Nationality statement is not inherently hostile, and mixed-language context is insufficient to establish an implied insult.
+80	E	group	absent	false	identity_attack,encouragement_of_harm	Blames a nationality-defined team and invokes nuclear violence against a named person; no inference of a credible threat.
+81	I	group	absent	true	humiliation	Same speaker previously said fuck you and criticized play; ez continues the opponent-directed taunting exchange.
+82	I	individual	absent	true	humiliation	Death statistic follows the same speaker's sarcastic praise of the AM pick, supporting ridicule of that player.
+83	I	individual	absent	false	humiliation	Laughing and asking mad is an anger-baiting taunt rather than a neutral emotional check.
+84	U	unknown	absent	true	?	Easy-game slang without context may be celebration or an opponent-directed put-down.
+85	I	individual	absent	false	humiliation	Fail mid plus easy-mid framing mocks the opposing lane player's competence.
+86	I	individual	absent	true	humiliation	Repeated narration of the Sven talking while losing ridicules that player; earlier taunting supports the reading.
+87	I	individual	absent	true	humiliation	Questioning whether QOP had an easy mid after a failure complaint reads as mocking rather than a genuine question.
+88	U	unknown	absent	true	?	Easy game slogan alone does not distinguish celebration from humiliation of opponents.
+89	U	unknown	absent	true	?	Debates when ez can be said; partial mixed-language exchange does not establish a personal attack.
+90	I	individual	absent	false	humiliation	Imperative to keep feeding mocks the recipient for repeatedly dying to the speaker's hero.
+91	U	unknown	absent	true	?	Easy team could praise one's team or disparage opponents; missing context leaves the target unresolved.
+92	U	unknown	unknown	true	?	Isolated numerical question and V do not establish whether this is boasting, strategy, or ridicule.
+93	I	individual	absent	true	humiliation	Kid becomes a belittling age reference within the preceding SK-directed taunts.
+94	U	unknown	absent	true	?	Easy miss and laughter could refer to evading a spell or mocking failure; the recipient is unresolved.
+95	U	unknown	absent	true	?	Brief easy/QOP fragment lacks enough context to distinguish taunt from game description.
+96	E	individual	absent	false	insult	Loser is a direct derogatory personal label, regardless of the source implicit class.
+97	U	unknown	absent	true	?	Could be a wait request with a gesture or a dismissive kid taunt; context contains only another wait.
+98	U	unknown	absent	true	?	Could rebut an easy-win boast rather than attack a person; the exchange is not decisive.
+99	U	unknown	absent	true	?	Fragment about feeding lacks the referenced action or recipient; not enough evidence for hostility.
+100	I	individual	absent	false	humiliation	Laughter plus mad question is an anger-baiting interpersonal taunt.
+101	U	unknown	absent	true	?	Easy-mid boast without context could be celebratory or derogatory.
+102	U	unknown	absent	true	?	Easy-game wording and a report request do not establish whether LC is being attacked or legitimately reported.
+103	U	unknown	absent	true	?	Easy rating gain with a smile may be celebration or taunting; no earlier context is available.
+104	N	none	absent	false	-	Asks whether another player is serious or joking without an insult or threat.
+105	I	individual	absent	false	humiliation	Calling Antimage useful while blaming a loss conveys sarcastic blame.
+106	U	unknown	absent	true	?	Well-played and easy-lane phrases can mix praise and taunting; no history resolves the reading.
+107	U	unknown	unknown	true	?	Non-English expression requires a language-qualified reviewer; do not copy the source implicit label.
+108	U	unknown	absent	true	?	Good-game context and an easy-game smile do not conclusively distinguish celebration from taunting.
+109	N	none	absent	false	-	Describes an easy in-game kill without a personal put-down; kill is a game action here.
+110	I	individual	absent	false	humiliation	Links ez to another player's ragequit in a derisive framing.
+111	N	none	absent	false	-	Literal wording is self-directed criticism; prior messages do not establish impersonation of another player.
+112	U	unknown	absent	true	?	Stack may mean a party or a game action; the easy fragment does not establish interpersonal hostility.
+113	U	unknown	unknown	true	?	Correction marker, emote reference, and laughter leave the meaning and target unclear.
+114	E	individual	absent	false	insult	Directly says the Spectre player has no clue how to play their role.
+115	N	none	absent	false	-	Apologizes for the speaker's and team's poor play without attacking another person.
+116	I	group	absent	false	humiliation	Classic 3k framing uses rank as a dismissive stereotype of the named players' competence.
+117	I	individual	absent	false	humiliation	Named-player ez and laughing about an illusion frame that player as easily defeated.
+118	U	unknown	absent	true	?	Why you feed may be a genuine tactical question or blame; no earlier context distinguishes them.
+119	E	individual	absent	false	insult	Tells a player to leave because the team would win without them; overt exclusion and blame.
+120	U	unknown	absent	true	?	Could praise Enigma's score or mock a defeated player; earlier nvm does not resolve the target.
+121	E	individual	absent	false	insult	Directly calls the AM player useless in abbreviated wording.
+122	U	unknown	absent	true	?	Good-game/easy wording with unrelated earlier reports does not establish this speaker's attack.
+123	I	group	absent	false	identity_attack,humiliation	Links questioning why one plays the game to the team's nationality, implying that nationality makes the team undesirable.
+124	U	unknown	absent	true	?	An easy-rating-gain comment may celebrate winning; another speaker's noob insult does not prove this speaker's hostility.
+125	I	individual	absent	true	humiliation	Equates SF's item choice with losing and solicits reports amid same-speaker skill/rank mockery.
+126	U	unknown	absent	true	?	Could echo a party-rating discussion or join a taunt; the current speaker's stance is not clear.
+127	I	individual	absent	true	humiliation	Exaggerated automatic-win hero claims continue the same speaker's repetitive sarcastic mockery of another player's hero judgment.
+128	I	individual	absent	true	humiliation	Scoreline follows the same speaker's Ez sky, using deaths to ridicule that hero player.
+129	N	none	absent	false	-	Asks whether a disconnected player will return; no attack is expressed.
+130	N	none	absent	false	-	Names an in-game hero as a combat target, not a threat to a person outside gameplay.
+131	U	unknown	absent	true	?	Repeated easy-game celebration and laughter do not alone establish an interpersonal attack.
+132	U	unknown	absent	true	?	Lane-ease slogan could celebrate a result or taunt opponents; context is not decisive.
+133	I	team	absent	false	humiliation	Two versus eight implies one's teammates are effectively opponents, indirectly belittling their contribution.
+134	N	none	absent	false	-	Predicts an easy first blood for the opponents; tactical assessment without personal attack.
+135	E	individual	absent	false	insult	Direct useless label and quit-game instruction explicitly attack the AM player.
+136	N	none	absent	true	-	Same-speaker celebration and nearby nice-LC praise support celebrating an in-game achievement rather than targeting a person.
+137	N	none	absent	false	-	Announces use of the report function without an identifiable personal attack.
+138	U	unknown	absent	true	?	Rating-gain celebration following an opponent's concession could be taunting, but the available words do not settle intent.
+139	I	individual	absent	false	humiliation	Laughs at another player's ragequit in a derisive way.
+140	U	unknown	absent	true	?	Lane difficulty assessment may be a boast or put-down; partial history does not clearly establish hostility.
+141	I	individual	absent	true	humiliation	Compares the player's heroes using a poor score after an earlier same-speaker skill challenge, conveying ridicule.
+142	E	team	absent	false	insult	Directly calls all teammates lunatics.
+143	U	unknown	unknown	true	?	Mixed-language end request includes potentially abusive wording; needs language-qualified review instead of source-label copying.
+144	N	none	absent	true	-	Immediate same-speaker context describes damage, cooldown and mana; the current metaphor targets a mechanic, despite an earlier harmful message.
+145	I	individual	absent	true	humiliation	Named-player easy-win remark plus the same speaker's short-match timing reads as a targeted victory taunt; needs human review.
+146	U	unknown	absent	true	?	Bare scoreline could describe the speaker or another player; the AFK context does not resolve this.
+147	I	individual	absent	false	humiliation	Spotlights a poor solo-mid score in an accusatory format that implicitly ridicules that player's performance.
+148	U	unknown	absent	true	?	Easy fragment with an extra character lacks the context needed to infer a target or taunt.
+149	I	individual	absent	true	humiliation	Names a player's poor score amid insults and feeding complaints, supporting score-based ridicule.
+150	U	unknown	absent	true	?	Feed please could sarcastically criticize a player or solicit intentional in-game deaths; it is not necessarily interpersonal hostility.
+151	U	unknown	unknown	true	?	Mixed English/Russian-transliterated fragment may be abusive; profanity and target need language-qualified review.
+152	U	unknown	absent	true	?	Easy game follows good-game messages without clear evidence of an attack rather than celebration.
+153	I	individual	absent	true	humiliation	Counters an easy-mid boast by pointing to the recipient's repeated deaths, implicitly mocking their claimed success.
+154	I	individual	absent	true	humiliation	Same speaker previously requested reports for Bara; no-charge/easy remark continues a player-directed competence taunt.
+155	I	team	absent	true	humiliation	Role list ends in automatic-loss framing, continuing same-speaker insults about the team's composition and players.
+156	U	unknown	absent	true	?	Zero-kill remark could be a tactical fact or indirect blame; earlier insult by someone else is insufficient to decide.
+157	U	unknown	unknown	true	?	Fragment may refer to Invoker or call someone a joker; cannot establish meaning without context.
+158	U	unknown	absent	true	?	Easy celebration alone lacks evidence distinguishing excitement from humiliation of others.
+159	U	unknown	absent	true	?	Questioned easy claim and emoticons may be banter or sarcasm; no history is available.
+160	E	individual	absent	false	insult	Directly calls the Tinker player trash, regardless of the source implicit label.
+161	N	none	absent	false	-	Ordinary greeting addressed to another player.
+162	N	none	absent	true	-	References a game-video outlet while reacting to a play; no personal attack is expressed.
+163	U	unknown	absent	true	?	Winning without Lion could belittle an absent player or describe an in-game circumstance; laughter does not decide.
+164	U	unknown	absent	true	?	Laughter during a hostile exchange could join ridicule or merely react to the game; its target is unclear.
+165	U	unknown	absent	true	?	Throw fragment and laughter could mock a player or describe the match; no history is available.
+166	N	none	absent	false	-	Brief disagreement does not itself attack a person.
+167	N	none	absent	false	-	Literal gameplay praise with no evidence of sarcasm; do not presume hidden hostility in every compliment.
+168	N	none	absent	true	-	Answers a question about hating someone with not really; no communicated personal attack.
+169	N	none	absent	false	-	Laughter and whatever express a reaction without an identifiable personal put-down.
+170	N	none	absent	false	-	General dismay without an interpersonal target.
+171	N	none	absent	false	-	Self-referential statement about doing things, not an attack.
+172	N	none	absent	false	-	Gameplay buyback instruction; capital letters alone do not imply hostility.
+173	U	unknown	unknown	true	?	Transliterated Russian in full-width characters requires language-qualified review; preserve raw text.
+174	N	none	absent	false	-	Reassuring or supportive statement without an attack.
+175	U	unknown	absent	true	?	ZZZ may indicate boredom, sleep, or a taunt; no context identifies its meaning.
+176	U	unknown	unknown	true	?	Non-English phrase and context require language-qualified review rather than an English-only interpretation.
+177	N	none	absent	false	-	Expresses frustration at being affected, not an attack on another person.
+178	N	none	absent	false	-	Thanks another player for an ability use.
+179	I	individual	absent	true	humiliation	Better than you counters a prior item-timing criticism with a personal superiority put-down.
+180	U	unknown	absent	true	?	Easy-game token can be celebration or taunting; no context establishes hostility.
+181	N	none	present	false	-	Rich as fuck abbreviation emphasizes wealth without attacking a person.
+182	N	none	absent	false	-	Thanks another person.
+183	N	none	absent	true	-	Apologizes and explains a Windows update after asking to restart.
+184	N	none	absent	false	-	Evaluates the game as unusual, not a person.
+185	I	individual	absent	false	humiliation	Laughing that the recipient got rekt mid mocks their defeat.
+186	N	none	present	false	-	Describes trying one's best and frustration at events; profanity is not a player-directed attack.
+187	N	none	absent	false	-	Elongated good-game expression without an indicated attack.
+188	N	none	absent	false	-	Factual statement about connection status, not abusive address.
+189	N	none	absent	true	-	Connection and reconnection discussion supports a genuine technical question.
+190	N	none	absent	false	-	Explains network problems and requests time.
+191	N	none	absent	true	-	Earlier age discussion identifies this as a statement about the speaker's desired age.
+192	N	none	absent	false	-	Self-directed emotional disclosure; stereotype wording alone does not establish an attack on others here.
+193	N	none	absent	false	-	Laughter and agreement without an identifiable personal attack.
+194	N	none	absent	false	-	Thanks another person.
+195	N	none	absent	false	-	Location question without a threat or malicious statement in the supplied text.
+196	N	none	absent	true	-	Polite continuation of a reporting request; insufficient to infer malicious harassment from reporting alone.
+197	U	unknown	unknown	true	?	Portuguese message needs a language-qualified review; do not assume the original Other label is correct.
+198	N	none	absent	false	-	Named-player well-played praise with no contrary context; laughter alone does not establish sarcasm.
+199	N	none	absent	false	-	Question about liking chicken has no personal attack.
+200	N	none	absent	false	-	Meme comparing a game score with a love story lacks an identifiable attack on a person.
+201	U	unknown	absent	true	?	One-for-one and do nothing may describe a trade or belittle someone's contribution; prior fragments do not resolve it.
+202	N	none	absent	false	-	Join instruction without a personal attack.
+203	U	unknown	absent	true	?	Could celebrate despite being called toxic or ridicule someone else's loss; no history resolves the referent.
+204	I	group	absent	true	humiliation	Heavy metaphor belittles two teammates as burdens amid ability and item ridicule.
+205	N	none	absent	false	-	Positive remark about the day without evidence of a sarcastic attack.
+206	N	none	absent	false	-	Discusses a hero ability and in-game kills, not violence toward a real person.
+207	U	unknown	absent	true	?	Who talks may be a genuine question or a dismissive retort; the mixed fragments do not settle it.
+208	U	unknown	absent	true	?	Hero-player reference with ellipsis does not establish criticism or hostility without context.
+209	N	none	absent	false	-	Literal encouragement after an attempted play; no evidence of sarcasm is supplied.
+210	N	none	absent	false	-	Elongated good-game expression without a personal attack.
+211	N	none	absent	false	-	Brief hero reference/question without abusive wording.
+212	N	none	absent	false	-	Explains a mistaken assumption about detection in gameplay.
+213	N	none	absent	false	-	Explains a constrained hero pick without attacking another person.
+214	N	none	absent	false	-	Praise and a commendation request have no clear contrary evidence; preserve the possibility of later review.
+215	N	none	absent	false	-	Abbreviated agreement without personal criticism.
+216	N	none	absent	false	-	Statement about another person's language assumption without a put-down.
+217	U	unknown	absent	true	?	Farewell amidst insults and laughter could be neutral departure or a taunt; current speaker's intent is unclear.
+218	N	none	absent	false	-	Question about an in-game target or ability choice without an insult.
+219	U	unknown	absent	true	?	Isolated laughter does not establish whether someone is being humiliated.
+220	N	none	absent	false	-	Reassurance without an attack.
+221	N	none	absent	false	-	Suggests using the report system to avoid a player; no personal insult or threat in the current message.
+222	N	none	absent	false	-	Reports an AFK player and politely asks others to wait.
+223	N	none	absent	false	-	Requests reports without an accompanying personal insult; others' earlier insults do not automatically transfer to this speaker.
+224	N	none	absent	false	-	Polite request to wait for reconnection.
+225	N	none	absent	false	-	States a player's AFK status without abuse.
+226	N	none	absent	false	-	Commendation request; another speaker's joking report request does not establish sarcasm in this message.
+227	N	none	absent	false	-	Polite reporting request without abusive language or an established malicious purpose.
+228	N	none	absent	false	-	In-game no-defense instruction, not a stated interpersonal attack.
+229	N	none	absent	false	-	Polite wait request.
+230	N	none	absent	false	-	Readiness and go signal.
+231	N	none	absent	false	-	Reporting request with thanks; no explicit attack or evidence of harassment.
+232	N	none	absent	false	-	Reporting request and exclamation without a personal insult.
+233	U	unknown	absent	true	?	Sarcasm about one's own supporting and a report request may criticize conduct or belittle WR; context does not settle the boundary.
+234	U	unknown	absent	true	?	Questioned good game and mass-report request could reflect misconduct or a pile-on; the basis for reporting is missing.
+235	N	none	absent	false	-	Commendation request with thanks.
+236	N	none	present	false	-	Profane frustration at a pause targets a game event rather than a person.
+237	N	none	absent	false	-	Polite request to wait for another player.
+238	N	none	absent	true	-	Responds to a farming dispute with a rhetorical resource-allocation question, not a personal insult; hostile context alone does not make this reply hostile.
+239	N	none	absent	false	-	Reports alleged flaming and communication abuse; reporting abuse is not itself hostility.
+240	N	none	absent	false	-	Requests commendation and declines something else without a personal attack.

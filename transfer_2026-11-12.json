@@ -1,0 +1,27 @@
+{
+  "source": "/Users/wadoodabdul/dev/HIC",
+  "destination": "/Volumes/Samsung T7/HIC",
+  "copied_files": [
+    "data/annotations/conda_pilot_v1/summary.json",
+    "data/annotations/conda_pilot_v1/annotations.jsonl",
+    "data/annotations/conda_pilot_v1/selected_source_rows.json",
+    "data/annotations/conda_pilot_v1/build_pilot.py",
+    "data/annotations/conda_pilot_v1/README.md",
+    "data/annotations/conda_pilot_v1/decisions.tsv",
+    "data/annotations/conda_pilot_v1/sample_manifest.json",
+    "data/annotations/conda_pilot_v1/sentences_labels.csv",
+    "Bart-mnli/baselines/2026-11-11/environment_packages.json",
+    "Bart-mnli/baselines/2026-11-11/hypothesis.json",
+    "Bart-mnli/baselines/2026-11-11/bart.py.snapshot",
+    "Bart-mnli/TRAINING_PLAN.md",
+    "session.md"
+  ],
+  "post_copy_adjustments": [
+    "data/annotations/conda_pilot_v1/build_pilot.py",
+    "data/annotations/conda_pilot_v1/README.md",
+    "Bart-mnli/TRAINING_PLAN.md",
+    "session.md"
+  ],
+  "live_bart_sha256": "9d56fac717c9addc0478a29d6c0b614fad0af35ca258fa5fad94eb584002288d",
+  "note": "Copied artifacts verified byte-for-byte before documented destination adjustments."
+}

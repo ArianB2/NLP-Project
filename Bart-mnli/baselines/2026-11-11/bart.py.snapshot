@@ -1,0 +1,36 @@
+from transformers import pipeline
+
+classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+
+candidate_labels = [
+    "The speaker is criticizing themself",
+    "The speaker is criticizing the video game",
+    "The speaker is criticizing another player",
+    "The speaker is criticizing the team",
+    "The speaker is not criticizing anyone"
+]
+
+
+messages = [
+    "I can't believe how bad I played today.",
+    "This game is terrible.",
+    "That player is so annoying.",
+    "Our team is a mess.",
+    "I'm not mad at anyone.",
+    "I'm such an idiot",
+    "stupid tree",
+    "my shit is lagging",
+    "Great game guys",
+    "Player 2 is absolutely dog shit",
+    "Can't believe I missed that shot"
+]
+
+for message in messages:
+    result = classifier(message, candidate_labels, multi_label=False, hypothesis_template="{}.")
+
+    print(f"\n Message: {message}")
+
+    for label, score in zip(result["labels"][:3], result["scores"][:3]):
+        print(f"  {score:.2%} | {label}")
+
+

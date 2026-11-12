@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hostile intent record — draft v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "source", "source_labels", "game", "modality", "language", "conversation_id", "leakage_group_id", "speaker_id", "text_raw", "text", "transforms", "context", "context_available", "annotation", "quality"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["dataset", "version", "original_id", "url", "split", "license"],
+      "properties": {
+        "dataset": {"type": "string", "minLength": 1},
+        "version": {"$ref": "#/$defs/nullableString"},
+        "original_id": {"type": "string", "minLength": 1},
+        "url": {"$ref": "#/$defs/nullableString"},
+        "split": {"$ref": "#/$defs/nullableString"},
+        "license": {"$ref": "#/$defs/nullableString"}
+      }
+    },
+    "source_labels": {"type": "object"},
+    "game": {"$ref": "#/$defs/nullableString"},
+    "modality": {"enum": ["text_chat", "stt"]},
+    "language": {"$ref": "#/$defs/nullableString"},
+    "conversation_id": {"$ref": "#/$defs/nullableString"},
+    "leakage_group_id": {"$ref": "#/$defs/nullableString"},
+    "speaker_id": {"$ref": "#/$defs/nullableString"},
+    "text_raw": {"type": "string"},
+    "text": {"type": "string"},
+    "transforms": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "context_available": {"enum": ["complete", "partial", "none", "unknown"]},
+    "context": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "speaker_id", "text"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "speaker_id": {"$ref": "#/$defs/nullableString"},
+          "text": {"type": "string"}
+        }
+      }
+    },
+    "annotation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["hostility", "expression", "target", "behaviors", "profanity", "context_required", "evidence", "rationale", "status", "method", "guideline_version", "annotator_ids"],
+      "properties": {
+        "hostility": {"enum": ["hostile", "non_hostile", "uncertain", null]},
+        "expression": {"enum": ["explicit", "implicit", "not_applicable", "unknown"]},
+        "target": {"enum": ["individual", "team", "group", "self", "none", "unknown"]},
+        "behaviors": {
+          "type": ["array", "null"], "uniqueItems": true,
+          "items": {"enum": ["insult", "humiliation", "harassment", "identity_attack", "threat", "encouragement_of_harm"]}
+        },
+        "profanity": {"enum": ["present", "absent", "unknown"]},
+        "context_required": {"type": ["boolean", "null"]},
+        "evidence": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["message_id", "start", "end", "kind"],
+            "properties": {
+              "message_id": {"type": "string", "minLength": 1},
+              "start": {"type": "integer", "minimum": 0},
+              "end": {"type": "integer", "minimum": 1},
+              "kind": {"enum": ["hostility", "profanity", "slang", "game_term"]}
+            }
+          }
+        },
+        "rationale": {"$ref": "#/$defs/nullableString"},
+        "status": {"enum": ["pending", "proposed", "reviewed", "adjudicated"]},
+        "method": {"enum": ["human", "source_mapping", "model_assisted", null]},
+        "guideline_version": {"$ref": "#/$defs/nullableString"},
+        "annotator_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "quality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["decision", "reasons", "parent_id"],
+      "properties": {
+        "decision": {"enum": ["pending", "include", "exclude"]},
+        "reasons": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "parent_id": {"$ref": "#/$defs/nullableString"}
+      }
+    }
+  },
+  "$defs": {"nullableString": {"type": ["string", "null"]}}
+}
