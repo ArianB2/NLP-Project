@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 .matplotlib/
 ._*
+# Pipeline outputs that can be rebuilt
+models/
+data/processed/
+.DS_Store

@@ -1,0 +1,42 @@
+# Profanity lexicon used for the "has_profanity" flag.
+# One regular expression per line. Each pattern is matched as a whole word
+# (case-insensitive), so "ass" does not match "pass".
+# Lines starting with # are comments. Review and extend this list as a team.
+# It covers swear words, common gamer spellings, and a few slurs that show up
+# often in CONDA. Insults without swearing (noob, trash, bad) are NOT here on
+# purpose: the whole point is to separate profanity from hostility.
+f+[uv]+c*k+\w*
+fck\w*
+fk+
+fuk\w*
+fuq\w*
+fk?ing
+wtf
+stfu
+gtfo
+motherf\w*
+mf
+sh[i1]t\w*
+bullsh[i1]t\w*
+b[i1]tch\w*
+cunt\w*
+dick\w*
+cock\w*
+puss(y|ies)
+ass
+asses
+asshole\w*
+arse\w*
+bastard\w*
+damn\w*
+dammit
+crap\w*
+piss\w*
+twat\w*
+wank\w*
+whore\w*
+slut\w*
+retard\w*
+retad\w*
+fag\w*
+n[i1]gg\w*

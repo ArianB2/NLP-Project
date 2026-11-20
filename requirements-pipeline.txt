@@ -1,0 +1,10 @@
+# Packages for the research pipeline (src/, app.py). Colab already has most.
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+torch
+transformers
+gradio
+pytest

@@ -1,0 +1,2 @@
+system,test_set,n,precision,recall,f1,accuracy,tp,fp,fn,tn,fp_on_benign_profanity
+TF-IDF + LR,conda_test,3803,0.939,0.661,0.776,0.923,509,33,261,3000,20/84

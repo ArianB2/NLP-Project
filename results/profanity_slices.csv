@@ -1,0 +1,3 @@
+system,test_set,slice,n,precision,recall,f1
+TF-IDF + LR,conda_test,with profanity,394,0.92,0.745,0.824
+TF-IDF + LR,conda_test,no profanity,3409,0.955,0.604,0.74
