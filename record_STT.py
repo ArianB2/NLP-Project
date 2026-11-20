@@ -9,6 +9,7 @@ import sys
 import numpy as np
 import sounddevice as sd
 
+from hostility import CHECK_THRESHOLD, FLAG_THRESHOLD, HostilityMonitor, ToxicBertScorer
 from mic import Microphone
 from openai_service import FRAME_MS, OpenAITranscriptionSession, Transcript
 
@@ -66,32 +67,53 @@ async def record(args) -> str:
     stop = asyncio.Event()
     loop = asyncio.get_running_loop()
     mic = Microphone(device=args.device)
+    monitor = None
+    if not args.no_classify:
+        # Load first: the microphone queue only holds about two seconds of audio.
+        print("Loading hostility model...", flush=True)
+        scorer = ToxicBertScorer()
+        await asyncio.to_thread(scorer.load)
+        monitor = HostilityMonitor(
+            scorer, check=args.check_threshold, flag=args.flag_threshold,
+        )
 
     def stop_recording():
         mic.stop()
         stop.set()
 
     async with OpenAITranscriptionSession(delay=args.delay, languages=args.languages) as session:
+        def on_transcript(transcript: Transcript) -> None:
+            display_transcript(transcript)
+            if monitor is not None and transcript.final:
+                monitor.release(session)
+
         tasks = []
+        worker = None
         loop.add_signal_handler(signal.SIGINT, stop_recording)
         try:
             mic.start()
             print("Microphone on. Speak to see live transcription below.\n"
                   "Press Ctrl+C to stop and show the full transcript.\n", flush=True)
-            receiver = asyncio.create_task(session.receive_transcripts(display_transcript))
+            receiver = asyncio.create_task(session.receive_transcripts(on_transcript))
             sender = asyncio.create_task(stream_microphone(
                 mic, session, stop, threshold=args.threshold, silence_ms=args.silence_ms,
             ))
             tasks = [receiver, sender]
+            if monitor is not None:
+                worker = asyncio.create_task(monitor.run())
             done, _ = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
             for task in done:
                 task.result()
+            if monitor is not None:
+                await monitor.finish(session)
+                print(f"\n{monitor.summary()}", flush=True)
             return session.text
         finally:
             mic.stop()
-            for task in tasks:
+            running = tasks + ([worker] if worker is not None else [])
+            for task in running:
                 task.cancel()
-            await asyncio.gather(*tasks, return_exceptions=True)
+            await asyncio.gather(*running, return_exceptions=True)
             loop.remove_signal_handler(signal.SIGINT)
 
 
@@ -103,12 +125,19 @@ def main() -> None:
     parser.add_argument("--delay", choices=["minimal", "low", "medium", "high", "xhigh"], default="low")
     parser.add_argument("--threshold", type=int, default=500, help="Speech RMS threshold, 1–32767")
     parser.add_argument("--silence-ms", type=int, default=500, help="Silence before finalizing a turn")
+    parser.add_argument("--no-classify", action="store_true", help="Transcribe without hostility scoring")
+    parser.add_argument("--check-threshold", type=float, default=CHECK_THRESHOLD,
+                        help="Score at which a turn is marked for checking")
+    parser.add_argument("--flag-threshold", type=float, default=FLAG_THRESHOLD,
+                        help="Score at which a turn is flagged as hostile")
     args = parser.parse_args()
     if args.list_devices:
         print(sd.query_devices())
         return
     if not 1 <= args.threshold <= 32767 or args.silence_ms < FRAME_MS:
         parser.error("threshold must be 1–32767 and silence-ms must be at least 20")
+    if not 0 <= args.check_threshold < args.flag_threshold <= 1:
+        parser.error("thresholds must satisfy 0 <= check-threshold < flag-threshold <= 1")
     try:
         text = asyncio.run(record(args))
         if text:
